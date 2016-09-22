@@ -1,0 +1,10 @@
+langauge: c
+
+compiler: gcc
+
+notifications:
+    email: false
+
+script: make
+
+os: "osx"
