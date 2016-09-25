@@ -6,9 +6,11 @@
 /*   By: mhurd <mhurd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:50:29 by mhurd             #+#    #+#             */
-/*   Updated: 2016/09/21 13:09:40 by mhurd            ###   ########.fr       */
+/*   Updated: 2016/09/22 13:48:55 by mhurd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

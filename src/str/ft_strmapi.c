@@ -19,9 +19,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	ret = strdup(s);
+	ret = ft_strnew(ft_strlen(s));
+	if (!ret)
+		return (NULL);
 	x = -1;
-	while (*(ret + (++x)))
-		ret[x] = f(x, ret[x]);
+	while (s[++x])
+		ret[x] = f(x, s[x]);
 	return (ret);
 }

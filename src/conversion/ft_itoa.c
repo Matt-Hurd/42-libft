@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+int		chars(int n)
+{
+	int c;
+
+	c = (n < 0) ? 2 : 1;
+	while (n && (n /= 10))
+		c++;
+	return (c);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*ret;
@@ -19,7 +29,7 @@ char	*ft_itoa(int n)
 	int		index;
 
 	index = 0;
-	ret = ft_strnew(20);
+	ret = ft_strnew(chars(n));
 	if (!ret)
 		return (NULL);
 	neg = (n < 0) ? 1 : 0;

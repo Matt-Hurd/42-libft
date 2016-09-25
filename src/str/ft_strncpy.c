@@ -20,9 +20,11 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 	x = -1;
 	ret = dest;
 	while (++x < n)
-		if (*(src++))
-			*(dest++) = *(src - 1);
+	{
+		if (*(src))
+			*(dest++) = *(src++);
 		else
 			*(dest++) = 0;
+	}
 	return (ret);
 }

@@ -14,8 +14,6 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t num)
 {
-	if (!dest || !src)
-		return (0);
 	while (num--)
 		((t_byte *)dest)[num] = ((t_byte *)src)[num];
 	return (dest);

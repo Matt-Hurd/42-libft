@@ -14,15 +14,13 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *location;
+	int i;
 
-	if (!s)
-		return (NULL);
-	location = NULL;
-	while (*s != '\0')
-		if (*s++ == (char)c)
-			location = (char *)s - 1;
-	if (*s == (char)c)
-		return ((char *)s);
-	return ((char *)location);
+	i = 0;
+	while (s[i])
+		i++;
+	while (i >= 0)
+		if (s[i--] == (char)c)
+			return ((char *)s + i + 1);
+	return (NULL);
 }

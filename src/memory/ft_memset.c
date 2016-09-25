@@ -14,8 +14,6 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	if (!s)
-		return (0);
 	while (n--)
 		((t_byte *)s)[n] = (t_byte)c;
 	return (s);

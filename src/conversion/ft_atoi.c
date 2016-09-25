@@ -6,13 +6,13 @@
 /*   By: mhurd <mhurd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 10:39:51 by mhurd             #+#    #+#             */
-/*   Updated: 2016/09/21 13:20:44 by mhurd            ###   ########.fr       */
+/*   Updated: 2016/09/22 13:37:17 by mhurd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		get_return(unsigned long long ret, int neg, const char *nptr)
+static int	get_return(unsigned long long ret, int neg, const char *nptr)
 {
 	int count;
 
@@ -29,7 +29,7 @@ int		get_return(unsigned long long ret, int neg, const char *nptr)
 		return (ret * neg);
 }
 
-int		ft_atoi(const char *nptr)
+int			ft_atoi(const char *nptr)
 {
 	unsigned long long	ret;
 	int					len;

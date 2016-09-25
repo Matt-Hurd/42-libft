@@ -17,5 +17,5 @@ char	*ft_strdup(const char *s)
 	char	*ret;
 
 	ret = (char *)ft_strnew(ft_strlen(s) * sizeof(char));
-	return (ft_strcpy(ret, s));
+	return (ret ? ft_strcpy(ret, s) : NULL);
 }
