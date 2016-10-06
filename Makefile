@@ -1,8 +1,8 @@
 NAME =	libft.a
-FLAGS =	-Wall -Wextra -Werror -O3
+FLAGS =	-Wall -Wextra -Werror
 CC = 	gcc
 ODIR =	bin/
-IDIR =	includes/
+IDIR = 
 SRC =
 OBJ =	$(SRC:.c=.o)
 EXT =	$(IDIR)$(NAME:.a=.h)
@@ -35,6 +35,7 @@ SRC +=	ft_memcmp.c
 
 SRC +=	ft_memalloc.c
 SRC +=	ft_memdel.c
+SRC +=	ft_realloc.c
 # **************************************************************************** #
 # put                                                                          #
 # **************************************************************************** #
@@ -46,6 +47,7 @@ SRC +=	ft_putnbr.c
 SRC +=	ft_putnbr_fd.c
 SRC +=	ft_putstr.c
 SRC +=	ft_putstr_fd.c
+SRC +=	ft_print_memory.c
 # **************************************************************************** #
 # str                                                                          #
 # **************************************************************************** #
@@ -62,6 +64,7 @@ SRC +=	ft_strstr.c
 SRC +=	ft_strnstr.c
 SRC +=	ft_strcmp.c
 SRC +=	ft_strncmp.c
+SRC +=	ft_strrev.c
 
 SRC +=	ft_strnew.c
 SRC +=	ft_strdel.c
@@ -76,18 +79,31 @@ SRC +=	ft_strsub.c
 SRC +=	ft_strjoin.c
 SRC +=	ft_strtrim.c
 SRC +=	ft_strsplit.c
+
+SRC +=	ft_strcjoin.c
+SRC +=	ft_printjoin.c
 # **************************************************************************** #
 # integer                                                                      #
 # **************************************************************************** #
 SRC +=	ft_atoi.c
 SRC +=	ft_itoa.c
+# **************************************************************************** #
+# list                                                                         #
+# **************************************************************************** #
+SRC +=	ft_lstnew.c
+SRC +=	ft_lstdelone.c
+SRC +=	ft_lstdel.c
+SRC +=	ft_lstadd.c
+SRC +=	ft_lstiter.c
+SRC +=	ft_lstmap.c
+SRC +=	ft_lstmap.c
+SRC +=	ft_gnl.c
 
 O =		$(addprefix $(ODIR), $(OBJ))
-vpath %.c src/:src/char/:src/conversion/:src/memory/:src/put/:src/str/
-
-love: all
 
 all: $(NAME)
+
+love: all
 
 norm:
 	norminette $(S)
@@ -98,7 +114,7 @@ $(NAME): $(O) $(EXT)
 
 $(ODIR)%.o: %.c $(EXT)
 	@echo "-> Compiling $<..."
-	@$(CC) $(FLAGS) -I$(IDIR) -c $< -o $@
+	@$(CC) $(FLAGS) -c $< -o $@
 
 $(O): | ./bin
 

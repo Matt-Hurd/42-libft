@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhurd <mhurd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/21 09:34:50 by mhurd             #+#    #+#             */
-/*   Updated: 2016/09/21 13:10:01 by mhurd            ###   ########.fr       */
+/*   Created: 2016/09/22 02:02:39 by mhurd             #+#    #+#             */
+/*   Updated: 2016/09/22 13:00:29 by mhurd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	size_t i;
-
-	if (src < dest)
-	{
-		i = len;
-		while (i-- > 0)
-			((char *)dest)[i] = ((char *)src)[i];
-	}
-	else
-	{
-		i = 0;
-		while (i < len)
-		{
-			((char *)dest)[i] = ((char *)src)[i];
-			i++;
-		}
-	}
-	return (dest);
+	if (!new || !alst)
+		return ;
+	if (*alst)
+		new->next = *alst;
+	*alst = new;
 }

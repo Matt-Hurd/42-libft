@@ -6,13 +6,13 @@
 /*   By: mhurd <mhurd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 15:39:41 by mhurd             #+#    #+#             */
-/*   Updated: 2016/09/21 16:48:52 by mhurd            ###   ########.fr       */
+/*   Updated: 2016/09/27 15:20:44 by mhurd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		chars(int n)
+static int	chars(int n)
 {
 	int c;
 
@@ -22,7 +22,7 @@ int		chars(int n)
 	return (c);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*ret;
 	int		neg;

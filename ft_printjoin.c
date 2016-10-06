@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_typedefs.h                                   :+:      :+:    :+:   */
+/*   ft_printjoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhurd <mhurd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/21 09:34:50 by mhurd             #+#    #+#             */
-/*   Updated: 2016/09/21 13:09:08 by mhurd            ###   ########.fr       */
+/*   Created: 2016/09/26 16:50:56 by mhurd             #+#    #+#             */
+/*   Updated: 2016/09/26 16:55:35 by mhurd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_TYPEDEFS_H
-# define LIBFT_TYPEDEFS_H
+#include "libft.h"
 
-typedef unsigned char	t_byte;
-typedef struct			s_list
+void	ft_printjoin(char *delim, char **arr, size_t size)
 {
-	void				*content;
-	size_t				content_size;
-	struct s_list		*next;
-}						t_list;
-
-#endif
+	if (!arr || !*arr)
+		return ;
+	while (size--)
+	{
+		ft_putstr(*arr++);
+		if (size >= 1)
+			ft_putstr(delim);
+	}
+}
