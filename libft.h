@@ -6,7 +6,7 @@
 /*   By: mhurd <mhurd@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 09:58:28 by mhurd             #+#    #+#             */
-/*   Updated: 2016/09/27 15:24:35 by mhurd            ###   ########.fr       */
+/*   Updated: 2016/12/15 23:51:44 by mhurd            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ void			ft_printjoin(char *delim, char **arr, size_t size);
 
 int				ft_atoi(const char *nptr);
 char			*ft_itoa(int n);
+double			ft_atof(const char *str);
 
 /*
 ** List
