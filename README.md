@@ -93,7 +93,7 @@ This is a list of my projects that use Libft extensively:
 
 ### How did you make this sick README?
 
-It was **heavily** inspired by my friend [R4meau][1].
+It was **heavily** inspired by my friend [R4meau][3].
 
 [1]: https://github.com/Matt-Hurd/42-libft/blob/master/libft.en.pdf "Libft PDF"
 [2]: http://42.us.org "42 USA"
